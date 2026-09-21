@@ -15,7 +15,7 @@ module topmodule (
     clkdivider CLK_DIV (
 
         .clk(clk),
-        .reset(rst),
+        .reset(1'b0),
         .clkout(clkout)
 
     );
