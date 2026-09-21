@@ -6,6 +6,11 @@ module clkdivider(
 
     reg [25:0] count;
 
+    initial begin
+        count  = 0;
+        clkout = 0;
+    end
+
     always @(posedge clk or posedge reset) begin
         if (reset == 1) begin
             count <= 0;
@@ -19,5 +24,4 @@ module clkdivider(
             count <= count + 1;
         end
     end
-
 endmodule
